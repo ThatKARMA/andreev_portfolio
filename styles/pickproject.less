@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.title h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+	background-image: linear-gradient(to right, #ffffff 0%, #ff00ee 46%, #ffffff 65%, #ffa600 100%);
+    font-weight: bold;
+}
+
+.list_menu a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+	background-image: linear-gradient(to right, #ffffff 0%, #ff00ee 46%, #ffffff 65%, #ffa600 100%);
+    font-weight: bold;
+    border-left: 2px solid #c735c7;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.list_menu a:hover {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+	background-image: linear-gradient(to right, #ffffff 0%, #ff00ee 46%, #ffffff 65%, #ffa600 100%);
+    font-weight: bold;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer_menu p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+	background-image: linear-gradient(to right, #ffffff 0%, #ff00ee 46%, #ffffff 65%, #ffa600 100%);
+    font-weight: bold;
+}
+
+.list_menu {
+    margin-bottom: 50px;
+}
+
+.list_menu li {
+    margin: 25px 0;
+}
+
+.menu {
+    padding: 25vh 50px;
+    position: fixed;
+    background: rgba(20, 20, 20, 0,5);
+    height: 100%;
+    backdrop-filter: blur(16px);
+    border-right: 10px solid #cd29cd;
+    left: -312px;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    top: 0;
+}
+
+.menu:hover {
+    left: 0;
+    transition: all 0.4s ease;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    padding-left: 30%;
+}
+   
+.content {
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content > video {
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+    width: 100%;
+}
+
+.overvideo {
+    z-index: 5;
+    color: white;
+    position: absolute;
+    width: 1400px;
+}
+
+// cursor
+body {
+    cursor: none; /*отключает курсор на странице, удалить строку, если нужно оставить курсор*/
+}
+
+.page {
+    display: none;
+}
+
+.Cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    transform-origin: center center;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    filter: url("#goo");
+    mix-blend-mode: difference;
+}
+
+.Cursor span {
+    position: absolute;
+    display: block;
+    width: 26px;   /*ширина */
+    height: 26px; /*высота*/
+    border-radius: 20px;
+    background-color: #fff; /*цвет*/
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 480px) {
+    .Cursor {
+        display: none;
+    }
+}
+
+:hover {
+    cursor: none;
+}
+
+.clr  {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+// main
+.projects {
+    width: 780px;
+}
+
+.projects_header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;    
+    padding: 20px;
+    border-radius: 30px;
+    border: solid greenyellow 2px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.projects_footer {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;    
+    padding: 20px;
+    border-radius: 30px;
+    border: solid greenyellow 2px;
+    background-color: rgba(30, 53, 27, 0.7);
+    width: 1150px;
+    margin-left: -22%;
+}
+
+
+.projects_grid {
+    display: flex;
+    background-color: rgba(30, 53, 27, 0.7);
+    padding: 50px;
+    border-radius: 30px;
+    border: solid greenyellow 2px;
+    margin-top: 30px;
+    width: 1150px;
+    margin-left: -22%;
+    grid-gap: 70px;
+    text-align: center;
+}
+
+.projects_header__img > img {
+    height: 300px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.projects_header__img > img:hover {
+    scale: 1.15;
+}
+
+.projects_second__header {
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    font-weight: bold;
+}
+
+.projects_second__link:not(:first-child) {
+    margin-top: 10px;
+}
+
+.projects_second__link:not(:first-child) > a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ff00d0;
+    text-shadow: rgb(25, 0, 255) 1px 0 10px;
+    font-weight: bold;
+}
+
+.projects_second__link:not(:first-child) > a:hover {
+    text-decoration: none;
+    font-size: 18px;
+    color: #b9d21b;
+}
