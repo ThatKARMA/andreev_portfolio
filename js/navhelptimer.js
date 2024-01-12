@@ -1,6 +1,5 @@
 let sec = 0;
 let hovernav = 0;
-$('#mydivid').css("visibility","visible");
 
 function start() {
 
